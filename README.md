@@ -1,19 +1,18 @@
-# Deblur-GS: 3D Gaussian Splatting from Camera Motion Blurred Images
+# Gaussian Splats for Real World Video
+
+This adapts gaussian splats to be used on amateur(sparse, shaky, blurry) iphone data.
+
+
+This adds:
+- camera pose learning
+- time variable
+- deblur(https://github.com/Chaphlagical/Deblur-GS)
+- importance sampling[Learns the frame and patches with the most intersting features across time and spacetime]
+
+This started as a fork from:
+
+Deblur-GS: 3D Gaussian Splatting from Camera Motion Blurred Images
 Official  implementation of paper "Deblur-GS: 3D Gaussian Splatting from Camera Motion Blurred Images", I3D 2024
-
->Deblur-GS: 3D Gaussian Splatting from Camera Motion Blurred Images
->
->Wenbo Chen, Ligang Liu
->
->I3D 2024
->
->[project page](https://chaphlagical.icu/Deblur-GS/) [paper](http://doi.acm.org/10.1145/3651301) [dataset](https://drive.google.com/drive/folders/1zTLW9kPe8lVgl8U2RkSHI4Tm5HyuCAon)
-
-![teaser](asset/teaser.png)
-
-## Abstract
-
-Novel view synthesis has undergone a revolution thanks to the radiance field method. The introduction of 3D Gaussian splatting (3DGS) has successfully addressed the issues of prolonged training times and slow rendering speeds associated with the Neural Radiance Field (NeRF), all while preserving the quality of reconstructions. However, 3DGS remains heavily reliant on the quality of input images and their initial camera pose initialization. In cases where input images are blurred, the reconstruction results suffer from blurriness and artifacts. In this paper, we propose the Deblur-GS method for reconstructing 3D Gaussian points to create a sharp radiance field from a camera motion blurred image set. We model the problem of motion blur as a joint optimization challenge involving camera trajectory estimation and time sampling. We cohesively optimize the parameters of the Gaussian points and the camera trajectory during the shutter time. Deblur-GS consistently achieves superior performance and rendering quality when compared to previous methods, as demonstrated in evaluations conducted on both synthetic and real datasets
 
 ## Installation
 
